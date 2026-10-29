@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fiza Batool — Soft Modernist Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            canvas: '#F9FAFB',
+            surface: '#FFFFFF',
+            subtle: '#F3F4F6',
+            mintbg: '#ECFDF5',
+            mintborder: '#A7F3D0',
+            minttext: '#065F46',
+            mintaccent: '#10B981',
+            graphite: '#111827',
+            graphitemuted: '#4B5563',
+            graphitelight: '#6B7280',
+            slateaccent: '#334155',
+            brandblue: '#2563EB',
+            hairline: '#E5E7EB'
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .page-section { display: none; }
+    .page-section.active { display: block; }
+    .nav-tab.active {
+      color: #111827;
+      background-color: #FFFFFF;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      font-weight: 600;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+  </style>
+</head>
+<body class="bg-canvas text-graphite font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-100 selection:text-emerald-900">
+<!-- Concept Banner (Light Soft Modernist) -->
+<aside aria-label="Concept Banner" class="bg-subtle/80 text-graphitemuted text-xs px-6 py-2.5 flex items-center justify-between border-b border-hairline">
+<div class="flex items-center space-x-3">
+
+
+</div>
+</aside>
+<!-- Global Header Navigation -->
+<header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md border-b border-hairline">
+<div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+<!-- Wordmark -->
+<a class="flex items-center space-x-3 group" href="javascript:void(0)" onclick="navigateTo('home')">
+<div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-mono font-bold text-sm tracking-tight group-hover:bg-brandblue transition-colors">
+          FB
+        </div>
+<div class="flex flex-col">
+<span class="font-semibold text-sm tracking-tight text-graphite group-hover:text-brandblue transition-colors leading-none">Fiza Batool</span>
+<span class="text-[11px] text-graphitelight tracking-wide mt-0.5 font-normal">Accounts &amp; Computing</span>
+</div>
+</a>
+<!-- Functional 8-Route Navigation Pills -->
+<nav class="hidden md:flex items-center p-1 bg-subtle/80 rounded-xl border border-hairline text-xs font-medium text-graphitelight space-x-0.5">
+<button class="nav-tab px-3 py-1.5 rounded-lg transition-all active" data-route="home" onclick="navigateTo('home')">Home</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg transition-all hover:text-graphite" data-route="about" onclick="navigateTo('about')">About</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg transition-all hover:text-graphite" data-route="education" onclick="navigateTo('education')">Education</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg transition-all hover:text-graphite" data-route="experience" onclick="navigateTo('experience')">Experience</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg transition-all hover:text-graphite" data-route="projects" onclick="navigateTo('projects')">Projects</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg transition-all hover:text-graphite" data-route="skills" onclick="navigateTo('skills')">Skills</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg transition-all hover:text-graphite" data-route="certificates" onclick="navigateTo('certificates')">Certificates</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg transition-all hover:text-graphite" data-route="contact" onclick="navigateTo('contact')">Contact</button>
+</nav>
+<!-- Action: Resume -->
+<div class="flex items-center space-x-2">
+<a class="inline-flex items-center space-x-1.5 px-3 py-1.5 text-xs font-medium border border-hairline bg-surface hover:bg-subtle text-graphite hover:border-slate-300 transition-all rounded-lg shadow-sm" href="mailto:fiza326batool@gmail.com?subject=Resume%20Request%20-%20Fiza%20Batool">
+<span class="material-symbols-outlined text-[16px] text-graphitemuted">description</span>
+<span>Resume [PDF]</span>
+</a>
+</div>
+</div>
+<!-- Mobile Route Bar -->
+<div class="md:hidden flex items-center overflow-x-auto px-4 py-2 border-t border-hairline bg-subtle/50 no-scrollbar space-x-1 text-xs">
+<button class="nav-tab px-2.5 py-1 rounded-md text-graphitemuted whitespace-nowrap active" data-route="home" onclick="navigateTo('home')">Home</button>
+<button class="nav-tab px-2.5 py-1 rounded-md text-graphitemuted whitespace-nowrap" data-route="about" onclick="navigateTo('about')">About</button>
+<button class="nav-tab px-2.5 py-1 rounded-md text-graphitemuted whitespace-nowrap" data-route="education" onclick="navigateTo('education')">Education</button>
+<button class="nav-tab px-2.5 py-1 rounded-md text-graphitemuted whitespace-nowrap" data-route="experience" onclick="navigateTo('experience')">Experience</button>
+<button class="nav-tab px-2.5 py-1 rounded-md text-graphitemuted whitespace-nowrap" data-route="projects" onclick="navigateTo('projects')">Projects</button>
+<button class="nav-tab px-2.5 py-1 rounded-md text-graphitemuted whitespace-nowrap" data-route="skills" onclick="navigateTo('skills')">Skills</button>
+<button class="nav-tab px-2.5 py-1 rounded-md text-graphitemuted whitespace-nowrap" data-route="certificates" onclick="navigateTo('certificates')">Certificates</button>
+<button class="nav-tab px-2.5 py-1 rounded-md text-graphitemuted whitespace-nowrap" data-route="contact" onclick="navigateTo('contact')">Contact</button>
+</div>
+</header>
+<!-- MAIN CONTENT CONTAINER -->
+<main class="flex-grow max-w-6xl mx-auto w-full px-6 py-10 md:py-14">
+<!-- ================= ROUTE 1: HOME ================= -->
+<section class="page-section active" id="view-home">
+<!-- Status Badge -->
+<div class="mb-5 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-surface border border-hairline text-xs text-graphitemuted shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="font-medium text-graphite">Fiza Batool</span>
+<span class="text-hairline">|</span>
+<span>Computer Science Student • Accounts &amp; Financial Operations</span>
+</div>
+<!-- Hero Header -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pb-10 border-b border-hairline">
+<div class="lg:col-span-8 space-y-5">
+<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-graphite leading-[1.15] tracking-tight">
+            Where Technology Meets Business and Analytical Thinking.
+          </h1>
+<p class="text-graphitemuted text-base md:text-lg leading-relaxed max-w-2xl font-normal">
+            Computer science student and accounting practitioner in Lahore, Pakistan. Bridging systematic software logic with general ledger reconciliation, statutory compliance, and organizational problem-solving.
+          </p>
+<div class="pt-2 flex flex-wrap gap-3 items-center">
+<button class="px-4 py-2.5 bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition-colors rounded-lg flex items-center space-x-1.5 shadow-sm" onclick="navigateTo('experience')">
+<span>View Experience</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<button class="px-4 py-2.5 border border-hairline bg-surface text-graphite text-xs font-semibold hover:bg-subtle transition-colors rounded-lg flex items-center space-x-1.5 shadow-sm" onclick="navigateTo('projects')">
+<span>Inspect Case Study</span>
+<span class="material-symbols-outlined text-[16px] text-graphitelight">analytics</span>
+</button>
+<a class="px-4 py-2.5 border border-hairline bg-subtle text-graphitemuted text-xs font-semibold hover:text-graphite transition-colors rounded-lg flex items-center space-x-1.5" href="mailto:fiza326batool@gmail.com">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Contact Candidate</span>
+</a>
+</div>
+</div>
+<!-- Metrics Strip Card -->
+<div class="lg:col-span-4 bg-surface border border-hairline p-5 rounded-2xl shadow-sm space-y-4">
+<div class="flex items-center justify-between border-b border-hairline pb-2.5">
+<span class="text-xs font-semibold text-graphitelight uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-brandblue">verified</span>
+              Verified Metrics
+            </span>
+<span class="text-[11px] font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded font-medium">Validated</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 bg-subtle/70 border border-hairline rounded-xl">
+<span class="block text-2xl font-bold text-graphite tracking-tight">3+ Yrs</span>
+<span class="text-xs text-graphitemuted font-medium leading-snug">Financial Experience</span>
+</div>
+<div class="p-3 bg-mintbg/60 border border-mintborder/60 rounded-xl">
+<span class="block text-2xl font-bold text-minttext tracking-tight">1st</span>
+<span class="text-xs text-minttext font-medium leading-snug">Academic Standing</span>
+</div>
+<div class="p-3 bg-subtle/70 border border-hairline rounded-xl">
+<span class="block text-2xl font-bold text-graphite tracking-tight">7 Leads</span>
+<span class="text-xs text-graphitemuted font-medium leading-snug">Team Members Guided</span>
+</div>
+<div class="p-3 bg-subtle/70 border border-hairline rounded-xl">
+<span class="block text-2xl font-bold text-slate-800 tracking-tight">4.5<span class="text-xs font-normal text-graphitelight">/5.0</span></span>
+<span class="text-xs text-graphitemuted font-medium leading-snug">Executive Rating</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Icon-First Feature: Software & Systems Arsenal Strip -->
+<div class="py-10 border-b border-hairline space-y-4">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="text-xs font-semibold text-graphitelight uppercase tracking-wider">System's-Experience</span>
+<h2 class="text-lg font-bold text-graphite">Software &amp; Systems Arsenal</h2>
+</div>
+<span class="text-xs text-graphitemuted font-mono hidden sm:inline">6 Core Platforms</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-1">
+<!-- MS Excel -->
+<div class="p-4 bg-surface border border-hairline rounded-xl hover:border-slate-300 hover:shadow-sm transition-all flex flex-col items-center text-center space-y-2.5">
+<div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-6 13h-2l-1.5-3-1.5 3H6l2.5-4.5L6.2 7h2.1L9.6 10l1.4-3H13l-2.4 4.4L13 16zm6 0h-5V7h5v9z"></path>
+</svg>
+</div>
+<div>
+<span class="block text-xs font-bold text-graphite">Microsoft Excel</span>
+<span class="text-[11px] text-graphitelight">Advanced Financial Modeling</span>
+</div>
+</div>
+<!-- MS Word -->
+<div class="p-4 bg-surface border border-hairline rounded-xl hover:border-slate-300 hover:shadow-sm transition-all flex flex-col items-center text-center space-y-2.5">
+<div class="w-10 h-10 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3.5 13l-1.5-6h-1.5l-1.5 6h-1.5L7 7h1.5l1.5 6 1.5-6h1.5l1.5 6 1.5-6H17l-1.5 9h-1.5z"></path>
+</svg>
+</div>
+<div>
+<span class="block text-xs font-bold text-graphite">Microsoft Word</span>
+<span class="text-[11px] text-graphitelight">Executive Reports &amp; Filing</span>
+</div>
+</div>
+<!-- MS PowerPoint -->
+<div class="p-4 bg-surface border border-hairline rounded-xl hover:border-slate-300 hover:shadow-sm transition-all flex flex-col items-center text-center space-y-2.5">
+<div class="w-10 h-10 rounded-lg bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-600">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-6 8c0 1.1-.9 2-2 2h-1v3H8V7h3c1.1 0 2 .9 2 2v2zm-2-1H9.5v1H11v-1z"></path>
+</svg>
+</div>
+<div>
+<span class="block text-xs font-bold text-graphite">PowerPoint</span>
+<span class="text-[11px] text-graphitelight">Stakeholder Presentations</span>
+</div>
+</div>
+<!-- QuickBooks -->
+<div class="p-4 bg-surface border border-hairline rounded-xl hover:border-slate-300 hover:shadow-sm transition-all flex flex-col items-center text-center space-y-2.5">
+<div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-700">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M8 12h8"></path>
+<path d="M12 8v8"></path>
+</svg>
+</div>
+<div>
+<span class="block text-xs font-bold text-graphite">QuickBooks</span>
+<span class="text-[11px] text-graphitelight">Ledger &amp; Invoicing</span>
+</div>
+</div>
+<!-- CaseWare -->
+<div class="p-4 bg-surface border border-hairline rounded-xl hover:border-slate-300 hover:shadow-sm transition-all flex flex-col items-center text-center space-y-2.5">
+<div class="w-10 h-10 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M4 4h16v16H4z"></path>
+<path d="M4 10h16"></path>
+<path d="M10 4v16"></path>
+</svg>
+</div>
+<div>
+<span class="block text-xs font-bold text-graphite">CaseWare</span>
+<span class="text-[11px] text-graphitelight">Statutory Audit Tools</span>
+</div>
+</div>
+<!-- Enterprise ERP Systems -->
+<div class="p-4 bg-surface border border-hairline rounded-xl hover:border-slate-300 hover:shadow-sm transition-all flex flex-col items-center text-center space-y-2.5">
+<div class="w-10 h-10 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<rect height="14" rx="2" ry="2" width="20" x="2" y="3"></rect>
+<line x1="8" x2="16" y1="21" y2="21"></line>
+<line x1="12" x2="12" y1="17" y2="21"></line>
+</svg>
+</div>
+<div>
+<span class="block text-xs font-bold text-graphite">ERP Systems</span>
+<span class="text-[11px] text-graphitelight">Corporate &amp; Campus Portals</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Icon-Indexed Capability Matrix -->
+<div class="py-10 space-y-5">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="text-xs font-semibold text-graphitelight uppercase tracking-wider">Capability Matrix</span>
+<h2 class="text-lg font-bold text-graphite">Core Operational Disciplines</h2>
+</div>
+<span class="text-xs text-graphitemuted font-mono">Precision Architecture</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- 1. Financial Reporting -->
+<div class="p-5 bg-surface border border-hairline rounded-2xl space-y-3 shadow-sm hover:border-slate-300 transition-all">
+<div class="w-9 h-9 rounded-xl bg-subtle text-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">finance_mode</span>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-graphite">Financial Reporting</h3>
+<p class="text-xs text-graphitemuted mt-1 leading-relaxed">Preparation of accurate balance sheet ledgers, quarterly expenditure statements, and corporate variance analysis.</p>
+</div>
+</div>
+<!-- 2. Accounts Reconciliation -->
+<div class="p-5 bg-surface border border-hairline rounded-2xl space-y-3 shadow-sm hover:border-slate-300 transition-all">
+<div class="w-9 h-9 rounded-xl bg-subtle text-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-graphite">Accounts Reconciliation</h3>
+<p class="text-xs text-graphitemuted mt-1 leading-relaxed">Systematic bank reconciliation, vendor billing audits, accounts receivable posting, and ledger clearance.</p>
+</div>
+</div>
+<!-- 3. Statutory Tax Documentation -->
+<div class="p-5 bg-surface border border-hairline rounded-2xl space-y-3 shadow-sm hover:border-slate-300 transition-all">
+<div class="w-9 h-9 rounded-xl bg-subtle text-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-graphite">Statutory Tax Documentation</h3>
+<p class="text-xs text-graphitemuted mt-1 leading-relaxed">Regulatory tax file schedules, sales tax compliance, advance corporate tax verification, and statutory records.</p>
+</div>
+</div>
+<!-- 4. Database Management -->
+<div class="p-5 bg-surface border border-hairline rounded-2xl space-y-3 shadow-sm hover:border-slate-300 transition-all">
+<div class="w-9 h-9 rounded-xl bg-subtle text-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-graphite">Database Management</h3>
+<p class="text-xs text-graphitemuted mt-1 leading-relaxed">Relational DBMS structures, query normalization, data integrity verification, and programmatic schema principles.</p>
+</div>
+</div>
+<!-- 5. Campus Management Portals -->
+<div class="p-5 bg-surface border border-hairline rounded-2xl space-y-3 shadow-sm hover:border-slate-300 transition-all">
+<div class="w-9 h-9 rounded-xl bg-subtle text-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-graphite">Campus Management Portals</h3>
+<p class="text-xs text-graphitemuted mt-1 leading-relaxed">Student fee voucher generation, fee database reconciliation, institutional treasury workflows, and portal audits.</p>
+</div>
+</div>
+<!-- 6. Cross-Disciplinary Leadership -->
+<div class="p-5 bg-surface border border-hairline rounded-2xl space-y-3 shadow-sm hover:border-slate-300 transition-all">
+<div class="w-9 h-9 rounded-xl bg-mintbg text-minttext flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">diversity_3</span>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-graphite">Cross-Disciplinary Leadership</h3>
+<p class="text-xs text-graphitemuted mt-1 leading-relaxed">Guided 7-member research team analyzing JSML enterprise operations to secure cohort 1st place standing.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= ROUTE 2: ABOUT ================= -->
+<section class="page-section" id="view-about">
+<div class="max-w-3xl space-y-8">
+<div class="space-y-2">
+<span class="text-xs font-semibold text-brandblue uppercase tracking-wider">Perspective &amp; Philosophy</span>
+<h2 class="text-2xl md:text-3xl font-bold text-graphite">Dual Discipline: Computational Logic &amp; Balance Sheet Rigor</h2>
+</div>
+<div class="text-graphitemuted text-sm md:text-base leading-relaxed space-y-4 font-normal">
+<p>
+            As a <strong class="text-graphite font-semibold">Computer Science Student at Qarshi University</strong>, my academic training focuses on structured problem solving, database architecture, and systematic computational processes.
+          </p>
+<p>
+            Concurrently, my practical experience as <strong class="text-graphite font-semibold">Manager – Accounts at Soban Chemical Industries</strong> and prior tenure at <strong class="text-graphite font-semibold">Soft3m Software House</strong> anchors my perspective in real-world balance sheet governance, client billing integrity, and statutory tax compliance.
+          </p>
+</div>
+<!-- 3 Modernist Pillar Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<div class="p-5 border border-hairline bg-surface rounded-2xl space-y-2 shadow-sm">
+<div class="w-7 h-7 rounded-lg bg-subtle flex items-center justify-center text-xs font-mono font-bold text-graphite">01</div>
+<h3 class="text-sm font-semibold text-graphite">Systematic Precision</h3>
+<p class="text-xs text-graphitemuted leading-relaxed">Applying computational logic to analyze workflows, reducing manual reconciliation redundancies across finance files.</p>
+</div>
+<div class="p-5 border border-hairline bg-surface rounded-2xl space-y-2 shadow-sm">
+<div class="w-7 h-7 rounded-lg bg-subtle flex items-center justify-center text-xs font-mono font-bold text-graphite">02</div>
+<h3 class="text-sm font-semibold text-graphite">Statutory Governance</h3>
+<p class="text-xs text-graphitemuted leading-relaxed">Managing monthly income tax, sales tax schedules, and corporate ledger reconciliation with audit compliance.</p>
+</div>
+<div class="p-5 border border-hairline bg-surface rounded-2xl space-y-2 shadow-sm">
+<div class="w-7 h-7 rounded-lg bg-subtle flex items-center justify-center text-xs font-mono font-bold text-graphite">03</div>
+<h3 class="text-sm font-semibold text-graphite">Cross-Team Synergy</h3>
+<p class="text-xs text-graphitemuted leading-relaxed">Leading collaborative projects, synthesizing complex requirements, and aligning organization milestones.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= ROUTE 3: EDUCATION ================= -->
+<section class="page-section" id="view-education">
+<div class="max-w-3xl space-y-8">
+<div class="space-y-2">
+<span class="text-xs font-semibold text-brandblue uppercase tracking-wider">Academic Foundation</span>
+<h2 class="text-2xl md:text-3xl font-bold text-graphite">Computer Science Foundations &amp; Systems Logic</h2>
+</div>
+<div class="p-6 bg-surface border border-hairline rounded-2xl shadow-sm space-y-5">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between pb-4 border-b border-hairline gap-2">
+<div>
+<span class="text-xs font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Enrolled Student</span>
+<h3 class="text-lg font-bold text-graphite mt-1.5">Computer Science Student — Qarshi University</h3>
+<p class="text-xs text-graphitelight">Associate Degree Program in Computer Science (ADPCS) • Lahore, Pakistan</p>
+</div>
+<div class="text-left sm:text-right">
+<span class="text-xs font-semibold text-graphite bg-subtle px-3 py-1 rounded-full">In Progress</span>
+</div>
+</div>
+<p class="text-xs md:text-sm text-graphitemuted leading-relaxed">
+            Concentration in structured programming principles, algorithmic logic, relational database management systems (DBMS), and systems analysis. Coursework emphasizes practical computing logic applied to enterprise workflows and data integrity.
+          </p>
+<div class="pt-2">
+<span class="text-xs font-semibold text-graphite block mb-2">Core Competency Areas:</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphite rounded-lg">Database Management</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphite rounded-lg">Algorithmic Problem-Solving</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphite rounded-lg">Systems Analysis</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphite rounded-lg">Data Structures</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= ROUTE 4: EXPERIENCE ================= -->
+<section class="page-section" id="view-experience">
+<div class="max-w-4xl space-y-8">
+<div class="space-y-2">
+<span class="text-xs font-semibold text-brandblue uppercase tracking-wider">Career History</span>
+<h2 class="text-2xl md:text-3xl font-bold text-graphite">Work Experience &amp; Fiscal Roles</h2>
+</div>
+<div class="space-y-4">
+<!-- Role 1: Soban Chemical Industries -->
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between border-b border-hairline pb-3 gap-1">
+<div>
+<h3 class="text-base font-bold text-graphite">Manager – Accounts</h3>
+<span class="text-xs font-medium text-brandblue">Soban Chemical Industries (SBC Pakistan)</span>
+</div>
+<span class="text-xs font-mono text-graphitelight bg-subtle px-2.5 py-1 rounded">July 2025 – Present</span>
+</div>
+<ul class="text-xs md:text-sm text-graphitemuted space-y-2.5 list-none leading-relaxed">
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 mt-0.5">check_circle</span>
+<span>Directs enterprise accounting operations, general ledger reconciliation, and fiscal reporting with rigorous audit accuracy.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 mt-0.5">check_circle</span>
+<span>Supports strategic corporate budgeting, financial modeling, and quarterly expenditure forecasting.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 mt-0.5">check_circle</span>
+<span>Prepares comprehensive statutory documentation for income tax and sales tax compliance, advance taxes, and filings.</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-2 pt-1 border-t border-hairline">
+<span class="text-[11px] font-mono text-graphitemuted bg-subtle px-2 py-0.5 rounded">General Ledger</span>
+<span class="text-[11px] font-mono text-graphitemuted bg-subtle px-2 py-0.5 rounded">Tax Compliance</span>
+<span class="text-[11px] font-mono text-graphitemuted bg-subtle px-2 py-0.5 rounded">Financial Modeling</span>
+</div>
+</div>
+<!-- Role 2: Qarshi University Intern -->
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between border-b border-hairline pb-3 gap-1">
+<div>
+<h3 class="text-base font-bold text-graphite">Intern – Account Assistant / Helper</h3>
+<span class="text-xs font-medium text-brandblue">Qarshi University (QU Pakistan)</span>
+</div>
+<span class="text-xs font-mono text-graphitelight bg-subtle px-2.5 py-1 rounded">June 2026 – Present</span>
+</div>
+<ul class="text-xs md:text-sm text-graphitemuted space-y-2.5 list-none leading-relaxed">
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 mt-0.5">check_circle</span>
+<span>Maintains accurate student fee databases and performs institutional ledger reconciliations.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 mt-0.5">check_circle</span>
+<span>Generates student fee vouchers and challan workflows across central university management portals.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 mt-0.5">check_circle</span>
+<span>Assists institutional treasury operations and verifies monthly banking records.</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-2 pt-1 border-t border-hairline">
+<span class="text-[11px] font-mono text-graphitemuted bg-subtle px-2 py-0.5 rounded">Campus Portals</span>
+<span class="text-[11px] font-mono text-graphitemuted bg-subtle px-2 py-0.5 rounded">Voucher Workflow</span>
+<span class="text-[11px] font-mono text-graphitemuted bg-subtle px-2 py-0.5 rounded">Bank Reconciliation</span>
+</div>
+</div>
+<!-- Role 3: Soft3m Software House -->
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between border-b border-hairline pb-3 gap-1">
+<div>
+<h3 class="text-base font-bold text-graphite">Accounts &amp; Client Relations Specialist</h3>
+<span class="text-xs font-medium text-brandblue">Soft3m Software House, Lahore</span>
+</div>
+<span class="text-xs font-mono text-graphitelight bg-subtle px-2.5 py-1 rounded">August 2022 – September 2024</span>
+</div>
+<ul class="text-xs md:text-sm text-graphitemuted space-y-2.5 list-none leading-relaxed">
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 mt-0.5">check_circle</span>
+<span>Administered accounts receivable cycles, client invoicing schedules, and international transaction postings.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 mt-0.5">check_circle</span>
+<span>Analyzed contract term disputes and payment schedules to reduce outstanding receivables.</span>
+</li>
+</ul>
+<div class="p-3 bg-subtle/70 rounded-xl border border-hairline text-[11px] text-graphitemuted flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-slate-500">info</span>
+<span><em>Verification Note:</em> Employment records and client billing ledgers verified through documented institutional certificates.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= ROUTE 5: PROJECTS ================= -->
+<section class="page-section" id="view-projects">
+<div class="max-w-4xl space-y-8">
+<div class="space-y-2">
+<span class="text-xs font-semibold text-brandblue uppercase tracking-wider">Featured Research</span>
+<h2 class="text-2xl md:text-3xl font-bold text-graphite">Operations Case Study &amp; Computing Initiatives</h2>
+</div>
+<!-- Featured Project: Jauharabad Sugar Mill (JSML) -->
+<div class="p-8 border border-hairline bg-surface rounded-2xl shadow-sm space-y-6">
+<div class="flex flex-wrap items-center justify-between gap-3">
+<span class="px-3 py-1 text-xs font-medium bg-mintbg text-minttext border border-mintborder rounded-full flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Cohort Distinction • 1st Place
+            </span>
+<span class="text-xs font-bold text-slate-800 bg-subtle px-3 py-1 rounded-full border border-hairline">
+              ★ 4.5 / 5.0 Executive Score
+            </span>
+</div>
+<div class="space-y-1.5">
+<h3 class="text-xl font-bold text-graphite">Jauharabad Sugar Mill (JSML) Operations Case Study</h3>
+<p class="text-xs font-mono text-graphitelight">Corporate Management &amp; Fiscal Systems Analysis • Qarshi University</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 py-3 border-y border-hairline text-center">
+<div class="p-2">
+<span class="block text-[11px] text-graphitelight uppercase font-medium">Leadership Role</span>
+<span class="text-xs font-bold text-graphite">Team Leader</span>
+</div>
+<div class="p-2">
+<span class="block text-[11px] text-graphitelight uppercase font-medium">Scale</span>
+<span class="text-xs font-bold text-graphite">7 Members Guided</span>
+</div>
+<div class="p-2">
+<span class="block text-[11px] text-graphitelight uppercase font-medium">Domain</span>
+<span class="text-xs font-bold text-graphite">Operations &amp; Fiscal Audit</span>
+</div>
+<div class="p-2">
+<span class="block text-[11px] text-graphitelight uppercase font-medium">Cohort Standing</span>
+<span class="text-xs font-bold text-emerald-600">1st Place</span>
+</div>
+</div>
+<p class="text-xs md:text-sm text-graphitemuted leading-relaxed">
+            Directed an exhaustive organizational operations and financial assessment of JSML. Coordinated team milestones, synthesized complex production datasets, and conducted structured interviews with company executives to analyze operations workflows, fiscal controls, and management bottlenecks.
+          </p>
+</div>
+<!-- In-Progress Computing Note -->
+<div class="p-6 border border-hairline bg-subtle/50 rounded-2xl space-y-3">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[18px] text-brandblue">code</span>
+<span class="text-xs font-bold text-graphite uppercase tracking-wide">Upcoming Computing Systems (ADPCS Focus)</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1">
+<div class="p-3 bg-surface border border-hairline rounded-xl text-xs">
+<span class="font-bold text-graphite block">Financial Data Portal</span>
+<span class="text-[11px] text-graphitelight">Relational database design phase</span>
+</div>
+<div class="p-3 bg-surface border border-hairline rounded-xl text-xs">
+<span class="font-bold text-graphite block">Reconciliation Script</span>
+<span class="text-[11px] text-graphitelight">Batch matching logic prototype</span>
+</div>
+<div class="p-3 bg-surface border border-hairline rounded-xl text-xs">
+<span class="font-bold text-graphite block">Campus Fee Generator</span>
+<span class="text-[11px] text-graphitelight">Student ledger API workflow</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= ROUTE 6: SKILLS ================= -->
+<section class="page-section" id="view-skills">
+<div class="max-w-4xl space-y-8">
+<div class="space-y-2">
+<span class="text-xs font-semibold text-brandblue uppercase tracking-wider">Competency Inventory</span>
+<h2 class="text-2xl md:text-3xl font-bold text-graphite">Documented Skill &amp; Systems Matrix</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Category 1 -->
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm space-y-4">
+<div class="flex items-center space-x-2.5">
+<span class="w-8 h-8 rounded-lg bg-blue-50 text-brandblue flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</span>
+<div>
+<span class="text-[11px] font-mono text-graphitelight uppercase">Domain 01</span>
+<h3 class="text-sm font-bold text-graphite">Computer Science &amp; Systems</h3>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Algorithmic Problem-Solving</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Database Management Basics</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Structured Programming Principles</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Systems Analysis</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Process Flow Modeling</span>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm space-y-4">
+<div class="flex items-center space-x-2.5">
+<span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</span>
+<div>
+<span class="text-[11px] font-mono text-graphitelight uppercase">Domain 02</span>
+<h3 class="text-sm font-bold text-graphite">Financial &amp; Balance Sheet Controls</h3>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">General Ledger Maintenance</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Statutory Tax Compliance</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Account Reconciliation</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Variance Analysis</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Budgeting &amp; Forecasting</span>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm space-y-4">
+<div class="flex items-center space-x-2.5">
+<span class="w-8 h-8 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">apps</span>
+</span>
+<div>
+<span class="text-[11px] font-mono text-graphitelight uppercase">Domain 03</span>
+<h3 class="text-sm font-bold text-graphite">Enterprise Software Platforms</h3>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Advanced MS Excel</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">QuickBooks</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">CaseWare</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Enterprise ERP Modules</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Campus Management Portals</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Microsoft Office Suite</span>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm space-y-4">
+<div class="flex items-center space-x-2.5">
+<span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</span>
+<div>
+<span class="text-[11px] font-mono text-graphitelight uppercase">Domain 04</span>
+<h3 class="text-sm font-bold text-graphite">Leadership &amp; Management</h3>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Team Leadership (7+ Members)</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Stakeholder Communications</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Client Relations &amp; Collections</span>
+<span class="px-2.5 py-1 text-xs bg-subtle border border-hairline text-graphitemuted rounded-lg">Process Compliance</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= ROUTE 7: CERTIFICATES ================= -->
+<section class="page-section" id="view-certificates">
+<div class="max-w-4xl space-y-8">
+<div class="space-y-2">
+<span class="text-xs font-semibold text-brandblue uppercase tracking-wider">Verified Credentials</span>
+<h2 class="text-2xl md:text-3xl font-bold text-graphite">Official Attestations &amp; Recognition</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-2">
+<span class="text-[11px] font-mono text-minttext bg-mintbg border border-mintborder px-2 py-0.5 rounded uppercase font-semibold">Academic Distinction</span>
+<h3 class="text-sm font-bold text-graphite">Academic &amp; Professional Recognition</h3>
+<p class="text-xs text-graphitemuted leading-relaxed">Issued by Qarshi University for sustained performance in ADPCS coursework and finance administration support.</p>
+</div>
+<div class="pt-3 border-t border-hairline text-[11px] text-graphitelight flex items-center">
+<span class="material-symbols-outlined text-[15px] text-emerald-600 mr-1.5">verified</span>
+<span>Verified Institutional Credential</span>
+</div>
+</div>
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-2">
+<span class="text-[11px] font-mono text-brandblue bg-blue-50 border border-blue-100 px-2 py-0.5 rounded uppercase font-semibold">Cohort 1st Place</span>
+<h3 class="text-sm font-bold text-graphite">Corporate Analysis Commendation</h3>
+<p class="text-xs text-graphitemuted leading-relaxed">JSML Research Project leadership award for exemplary operations audit and 4.5/5.0 presentation score.</p>
+</div>
+<div class="pt-3 border-t border-hairline text-[11px] text-graphitelight flex items-center">
+<span class="material-symbols-outlined text-[15px] text-emerald-600 mr-1.5">verified</span>
+<span>Verified Cohort Distinction</span>
+</div>
+</div>
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-2">
+<span class="text-[11px] font-mono text-slate-700 bg-subtle border border-hairline px-2 py-0.5 rounded uppercase font-semibold">Software Systems</span>
+<h3 class="text-sm font-bold text-graphite">Financial Systems &amp; Office Platforms</h3>
+<p class="text-xs text-graphitemuted leading-relaxed">Proficiency credential across CaseWare, QuickBooks, ERP modules, and executive MS Excel financial analysis.</p>
+</div>
+<div class="pt-3 border-t border-hairline text-[11px] text-graphitelight flex items-center">
+<span class="material-symbols-outlined text-[15px] text-emerald-600 mr-1.5">verified</span>
+<span>Operational Competency</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= ROUTE 8: CONTACT ================= -->
+<section class="page-section" id="view-contact">
+<div class="max-w-2xl space-y-8">
+<div class="space-y-2">
+<span class="text-xs font-semibold text-brandblue uppercase tracking-wider">Direct Dialogue</span>
+<h2 class="text-2xl md:text-3xl font-bold text-graphite">Contact Information</h2>
+</div>
+<p class="text-graphitemuted text-sm leading-relaxed">
+          Open to roles combining business operations, software technology, accounts leadership, and process automation in Lahore or remote.
+        </p>
+<div class="p-6 border border-hairline bg-surface rounded-2xl shadow-sm space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-hairline">
+<span class="text-xs font-medium text-graphitelight">Location</span>
+<span class="text-xs font-semibold text-graphite">Lahore, Pakistan</span>
+</div>
+<div class="flex items-center justify-between pb-3 border-b border-hairline">
+<span class="text-xs font-medium text-graphitelight">Official Email</span>
+<a class="text-xs font-medium text-brandblue hover:underline" href="mailto:fiza326batool@gmail.com">fiza326batool@gmail.com</a>
+</div>
+<div class="flex items-center justify-between pb-3 border-b border-hairline">
+<span class="text-xs font-medium text-graphitelight">Phone Number</span>
+<a class="text-xs font-mono font-medium text-graphite hover:text-brandblue" href="tel:03276394606">03276394606</a>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium text-graphitelight">Academic Status</span>
+<span class="text-xs font-medium text-graphite">Computer Science Student — Qarshi University</span>
+</div>
+</div>
+<div class="pt-2 flex flex-wrap gap-3">
+<a class="inline-flex items-center space-x-2 px-5 py-2.5 bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition-colors rounded-lg shadow-sm" href="mailto:fiza326batool@gmail.com?subject=Professional%20Inquiry%20-%20Fiza%20Batool">
+<span>Send Direct Email</span>
+<span class="material-symbols-outlined text-[16px]">mail</span>
+</a>
+<a class="inline-flex items-center space-x-2 px-5 py-2.5 border border-hairline bg-surface text-graphite text-xs font-semibold hover:bg-subtle transition-colors rounded-lg shadow-sm" href="tel:03276394606">
+<span>Call 03276394606</span>
+<span class="material-symbols-outlined text-[16px] text-graphitelight">call</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Global Footer (Light Soft Modernist) -->
+<footer class="mt-auto border-t border-hairline py-8 px-6 bg-surface text-graphitelight text-xs">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center space-x-3">
+<span class="w-6 h-6 rounded bg-slate-900 text-white font-mono text-xs font-bold flex items-center justify-center">FB</span>
+<span class="text-graphitemuted font-medium">© 2023 Fiza Batool •Qarshi University Lahore</span>
+</div>
+<div class="text-[12px] text-graphitelight text-center md:text-right">
+        Computer Science Student — Qarshi University • Finance Manager
+      </div>
+</div>
+</footer>
+<!-- Functional Routing Script -->
+<script>
+    function navigateTo(routeId) {
+      // Hide all pages
+      document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
+      // Remove active class from nav buttons
+      document.querySelectorAll('.nav-tab').forEach(btn => btn.classList.remove('active'));
+
+      // Show targeted page
+      const target = document.getElementById('view-' + routeId);
+      if (target) {
+        target.classList.add('active');
+      }
+
+      // Mark nav button active
+      document.querySelectorAll(`.nav-tab[data-route="${routeId}"]`).forEach(btn => {
+        btn.classList.add('active');
+      });
+
+      // Smooth scroll to top of main
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body></html>
